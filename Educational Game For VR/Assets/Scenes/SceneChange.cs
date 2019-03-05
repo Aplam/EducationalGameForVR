@@ -5,8 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-	public void Change(){
+	
+	public void ChangetoGame(){
 		SceneManager.LoadScene("SteamVR Test");
+	}
+
+	public void ChangetoOptions(){
+		SceneManager.LoadScene("Interactions_Example");
+	}
+
+	public void Exit(){
+		Application.Quit();
 	}
 
 }
