@@ -17,4 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SteamVR Test.unity
     guid: bfa6d11a24714c64286c5fcde28f326f
+  - enabled: 1
+    path: Assets/Scenes/Volume Scene.unity
+    guid: 5421206e443b1774ab479890a6747c9a
+  - enabled: 1
+    path: Assets/Scenes/Controls Menu.unity
+    guid: 5d657ee4b0be8cd4284dbb687c78a7d3
+  - enabled: 1
+    path: Assets/Scenes/Controls Rift.unity
+    guid: 1f53d670c81037f43b641fa0681d487b
+  - enabled: 1
+    path: Assets/Scenes/Controller Vive.unity
+    guid: 8a44f637e3a3417468897ed03bbb7e92
+  - enabled: 1
+    path: Assets/Scenes/Menu_copy.unity
+    guid: c3d0510e7a261c740a63afa2e32afb25
   m_configObjects: {}
