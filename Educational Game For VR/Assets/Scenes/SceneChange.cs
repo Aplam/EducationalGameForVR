@@ -7,9 +7,13 @@ public class SceneChange : MonoBehaviour
 {
 	
 	public void ChangetoGame(){
-		SceneManager.LoadScene("Interactions_Example");
+		SceneManager.LoadScene("New");
 	}
-	
+		
+	public void Pause(){
+		SceneManager.LoadScene("Menu_copy", LoadSceneMode.Additive);
+	}
+
 	public void ChangetoTitle(){
 		SceneManager.LoadScene("Menu_copy");
 	}
