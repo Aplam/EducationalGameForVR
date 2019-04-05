@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.VR;
 public class SceneChange : MonoBehaviour
 {
-	
+	public void recenter(){
+		UnityEngine.XR.InputTracking.Recenter();
+
+	}
 	public void ChangetoGame(){
-		SceneManager.LoadScene("New");
+		SceneManager.LoadScene("Tableware_For_Your_Kitchen_demo");
 	}
 		
 	public void Pause(){
