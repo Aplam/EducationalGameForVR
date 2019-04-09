@@ -89,6 +89,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean TopButton
+        {
+            get
+            {
+                return SteamVR_Actions.default_TopButton;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

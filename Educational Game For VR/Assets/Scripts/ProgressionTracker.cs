@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR;
 
 public class ProgressionTracker : MonoBehaviour {
-
+  public SteamVR_Action_Boolean topButton;
   public Text stepText;
   private int stepCount;
   private static string[] instructions = new string[]{
@@ -12,7 +13,8 @@ public class ProgressionTracker : MonoBehaviour {
     "Step 2: Aliquam hendrerit imperdiet erat id consequat.\n",
     "Step 3: Duis est enim, commodo sollicitudin suscipit a, aliquam et purus.\n",
     "Step 4: Praesent gravida, mi in ultrices eleifend, augue turpis porta erat, eget malesuada lacus risus pharetra orci.\n",
-    "Step 5: Quisque pellentesque facilisis ipsum, a dignissim leo pharetra eget."
+    "Step 5: Quisque pellentesque facilisis ipsum, a dignissim leo pharetra eget.\n",
+    "Congratulations! A winner is you!"
   };
   // Start is called before the first frame update
   void Start() {
@@ -21,12 +23,16 @@ public class ProgressionTracker : MonoBehaviour {
   }
   // Call NextStep once a step is completed to update the stepCount and show the player the next step
   void NextStep() {
-    stepCount += 1;
-    stepText.text += instructions[stepCount];
+    if(stepCount < instructions.Length - 1) {
+      stepCount += 1;
+      stepText.text += instructions[stepCount];
+    }
   }
 
   // Update is called once per frame
   void Update() {
-
+    if(SteamVR_Actions._default.TopButton.GetStateUp(SteamVR_Input_Sources.Any)) {
+      NextStep();
+    }
   }
 }
