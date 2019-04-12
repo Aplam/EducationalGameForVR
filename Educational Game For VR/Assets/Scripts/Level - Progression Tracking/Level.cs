@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 // This class is intended to provide methods for returning level specific data
 // EACH LEVEL SHOULD HAVE ITS OWN UNIQUE Level.cs
@@ -18,6 +19,10 @@ public class Level : MonoBehaviour
       "Step 5: Quisque pellentesque facilisis ipsum, a dignissim leo pharetra eget.\n",
       "Congratulations! A winner is you!"
     };
+  }
+
+  public bool stepCompleted() {
+    return SteamVR_Actions._default.TopButton.GetStateUp(SteamVR_Input_Sources.Any);
   }
 
 // Update is called once per frame

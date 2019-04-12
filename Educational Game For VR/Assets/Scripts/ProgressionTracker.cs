@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Valve.VR;
 
 public class ProgressionTracker : MonoBehaviour {
-  public SteamVR_Action_Boolean topButton;
+  // stepText: the worldspace Text object where instructions will be displayed to the player
   public Text stepText;
+  // progressAudio: the Audio Source object that will indicate to the player that a step has been completed
   public AudioSource progressAudio;
+  // level: The Level object associated with the current level
   public Level level;
+  // stepCount: The current step the player is on (0 indexed, 0 = 'Step 1')
   private int stepCount;
   // Start is called before the first frame update
   void Start() {
@@ -23,10 +25,9 @@ public class ProgressionTracker : MonoBehaviour {
       progressAudio.Play();
     }
   }
-
   // Update is called once per frame
   void Update() {
-    if(SteamVR_Actions._default.TopButton.GetStateUp(SteamVR_Input_Sources.Any)) {
+    if(level.stepCompleted()) {
       NextStep();
     }
   }
