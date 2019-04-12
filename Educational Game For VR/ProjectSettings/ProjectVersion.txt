@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-m_EditorVersion: 2018.3.12f1
-=======
 m_EditorVersion: 2018.3.11f1
->>>>>>> testcooking
