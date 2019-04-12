@@ -47,6 +47,8 @@ public class SceneChange : MonoBehaviour
 	}
 
 	public void ChangetoProgressionTracking(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Progression Tracking");
 	}
 
