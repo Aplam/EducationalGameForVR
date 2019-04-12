@@ -7,6 +7,7 @@ using Valve.VR;
 public class ProgressionTracker : MonoBehaviour {
   public SteamVR_Action_Boolean topButton;
   public Text stepText;
+  public AudioSource progressAudio;
   private int stepCount;
   private static string[] instructions = new string[]{
     "Step 1: Do the thing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n",
@@ -26,6 +27,7 @@ public class ProgressionTracker : MonoBehaviour {
     if(stepCount < instructions.Length - 1) {
       stepCount += 1;
       stepText.text += instructions[stepCount];
+      progressAudio.Play();
     }
   }
 
