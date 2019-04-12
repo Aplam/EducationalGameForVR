@@ -53,6 +53,7 @@ namespace Valve.VR.InteractionSystem
 			{
 				if ( _instance == null )
 				{
+					
 					_instance = FindObjectOfType<Player>();
 				}
 				return _instance;
@@ -254,6 +255,8 @@ namespace Valve.VR.InteractionSystem
 		{
 			if ( trackingOriginTransform == null )
 			{
+				GameObject player = GameObject.FindWithTag("Player_height");
+				Destroy(player);
 				trackingOriginTransform = this.transform;
 			}
 		}

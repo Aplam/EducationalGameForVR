@@ -7,6 +7,8 @@ public class SceneChange : MonoBehaviour
 {
 
 	public void ChangetoGame(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("New");
 	}
 
@@ -15,22 +17,32 @@ public class SceneChange : MonoBehaviour
 	}
 
 	public void ChangetoTitle(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Menu_copy");
 	}
 
 	public void ChangetoControls(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Controls Menu");
 	}
 
 	public void ChangetoVive(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Controller Vive");
 	}
 
 	public void ChangetoRift(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Controls Rift");
 	}
 
 	public void ChangetoOptions(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
 		SceneManager.LoadScene("Volume Scene");
 	}
 
