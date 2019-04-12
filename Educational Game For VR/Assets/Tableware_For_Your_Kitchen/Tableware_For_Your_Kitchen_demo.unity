@@ -906,11 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400080, guid: 55002cb40765a3941bcfc818f585369b, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
-      value: 4
-=======
-      value: 7.61
->>>>>>> testcooking
+      value: 7.481
       objectReference: {fileID: 0}
     - target: {fileID: 400080, guid: 55002cb40765a3941bcfc818f585369b, type: 3}
       propertyPath: m_LocalPosition.y
