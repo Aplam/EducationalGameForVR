@@ -36,6 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/New.unity
     guid: 2cf64e12c21f0ca4980d9bb7d6bbaabf
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Progression Tracking.unity
     guid: df2adb27800c2f44fb72a51c504a748f
+=======
+    path: Assets/Scenes/Tableware_For_Your_Kitchen_demo.unity
+    guid: cd869f5f22b47b54a8a5496f3cfb3dfe
+>>>>>>> testcooking
   m_configObjects: {}
