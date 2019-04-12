@@ -9,7 +9,7 @@ public class SceneChange : MonoBehaviour
 	public void ChangetoGame(){
 		GameObject player = GameObject.Find("Player_height");
 		Destroy(player);
-		SceneManager.LoadScene("New");
+		SceneManager.LoadScene("Tableware_For_Your_Kitchen_demo");
 	}
 
 	public void Pause(){
