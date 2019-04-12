@@ -999,6 +999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jerad Bitner's polykitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 100242, guid: 55002cb40765a3941bcfc818f585369b, type: 3}
+      propertyPath: m_TagString
+      value: bread
+      objectReference: {fileID: 0}
     - target: {fileID: 400080, guid: 55002cb40765a3941bcfc818f585369b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.481
@@ -1647,6 +1651,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 482002340}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &496206520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 496206522}
+  - component: {fileID: 496206521}
+  m_Layer: 0
+  m_Name: spawn object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &496206521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496206520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b3bd21714dba544b2bf0d64cd8bb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &496206522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496206520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8207154, y: 1.277997, z: -1.4686823}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496453990 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100146, guid: 55002cb40765a3941bcfc818f585369b,
@@ -3533,7 +3580,7 @@ GameObject:
   - component: {fileID: 1264084706}
   m_Layer: 0
   m_Name: bread_01
-  m_TagString: Untagged
+  m_TagString: bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5574,8 +5621,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ChangetoGame
+      - m_Target: {fileID: 496206521}
+        m_MethodName: dropBread
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
