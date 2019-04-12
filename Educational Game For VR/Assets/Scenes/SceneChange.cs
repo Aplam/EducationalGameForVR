@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-	
+
 	public void ChangetoGame(){
 		SceneManager.LoadScene("New");
 	}
-		
+
 	public void Pause(){
 		SceneManager.LoadScene("Menu_copy", LoadSceneMode.Additive);
 	}
@@ -21,7 +21,7 @@ public class SceneChange : MonoBehaviour
 	public void ChangetoControls(){
 		SceneManager.LoadScene("Controls Menu");
 	}
-	
+
 	public void ChangetoVive(){
 		SceneManager.LoadScene("Controller Vive");
 	}
@@ -32,6 +32,10 @@ public class SceneChange : MonoBehaviour
 
 	public void ChangetoOptions(){
 		SceneManager.LoadScene("Volume Scene");
+	}
+
+	public void ChangetoProgressionTracking(){
+		SceneManager.LoadScene("Progression Tracking");
 	}
 
 	public void Exit(){
