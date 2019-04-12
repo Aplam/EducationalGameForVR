@@ -8,25 +8,18 @@ public class ProgressionTracker : MonoBehaviour {
   public SteamVR_Action_Boolean topButton;
   public Text stepText;
   public AudioSource progressAudio;
+  public Level level;
   private int stepCount;
-  private static string[] instructions = new string[]{
-    "Step 1: Do the thing. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n",
-    "Step 2: Aliquam hendrerit imperdiet erat id consequat.\n",
-    "Step 3: Duis est enim, commodo sollicitudin suscipit a, aliquam et purus.\n",
-    "Step 4: Praesent gravida, mi in ultrices eleifend, augue turpis porta erat, eget malesuada lacus risus pharetra orci.\n",
-    "Step 5: Quisque pellentesque facilisis ipsum, a dignissim leo pharetra eget.\n",
-    "Congratulations! A winner is you!"
-  };
   // Start is called before the first frame update
   void Start() {
     stepCount = 0;
-    stepText.text = instructions[stepCount];
+    stepText.text = level.instructions[stepCount];
   }
   // Call NextStep once a step is completed to update the stepCount and show the player the next step
   void NextStep() {
-    if(stepCount < instructions.Length - 1) {
+    if(stepCount < level.instructions.Length - 1) {
       stepCount += 1;
-      stepText.text += instructions[stepCount];
+      stepText.text += level.instructions[stepCount];
       progressAudio.Play();
     }
   }
