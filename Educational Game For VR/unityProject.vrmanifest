@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.educationalgameforvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\CSE442\\Documents\\GitHub\\EducationalGameForVR\\Educational Game For VR\\actions.json",
+      "action_manifest_path": "D:\\Documents\\GitHub\\EducationalGameForVR\\Educational Game For VR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Educational Game For VR [Testing]"
