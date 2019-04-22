@@ -184,7 +184,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1156,6 +1156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontText: []
   backText: []
+  frontTextList: []
+  backTextList: []
+  cSVFile: {fileID: 4900000, guid: 90fea20b624a0a14eaeeddfdf40c1368, type: 3}
 --- !u!114 &1300405817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,7 +1173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardFront: {fileID: 1942382177}
   cardBack: {fileID: 87717729}
-  progressAudio: {fileID: 0}
+  progressAudio: {fileID: 208143340}
   level: {fileID: 1300405816}
 --- !u!1 &1455264777
 GameObject:
@@ -2043,7 +2046,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

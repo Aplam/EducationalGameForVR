@@ -16,17 +16,18 @@ public class FlashcardProgressionTracker : MonoBehaviour {
   // Start is called before the first frame update
   void Start() {
     stepCount = 0;
-    cardFront.text = level.frontText[stepCount];
-    cardBack.text = level.backText[stepCount];
+    cardFront.text = "This is the Omnicard.\n\nThis side is the front...";
+    cardBack.text = "... and this side is the back.\n\nPress \'Y\' to start studying your custom flashcards!\n\nAfter you're finished reviewing a card, press \'Y\' to proceed to the next.\n\nGood luck; have fun!";
   }
   // Call NextStep once a step is completed to update the stepCount and show the player the next step
   void NextStep() {
-    if(stepCount < level.frontText.Length - 1) {
-      stepCount += 1;
-      cardFront.text = level.frontText[stepCount];
-      cardBack.text = level.backText[stepCount];
-      progressAudio.Play();
+    if (stepCount == level.frontText.Length) {
+      stepCount = 0;
     }
+    cardFront.text = level.frontText[stepCount];
+    cardBack.text = level.backText[stepCount];
+    stepCount += 1;
+    progressAudio.Play();
   }
   // Update is called once per frame
   void Update() {
