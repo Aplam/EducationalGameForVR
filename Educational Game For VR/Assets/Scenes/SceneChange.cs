@@ -19,7 +19,7 @@ public class SceneChange : MonoBehaviour
 	public void ChangetoTitle(){
 		GameObject player = GameObject.Find("Player_height");
 		Destroy(player);
-		SceneManager.LoadScene("Menu_copy");
+		SceneManager.LoadScene("Menu");
 	}
 
 	public void ChangetoControls(){
@@ -50,6 +50,12 @@ public class SceneChange : MonoBehaviour
 		GameObject player = GameObject.Find("Player_height");
 		Destroy(player);
 		SceneManager.LoadScene("Progression Tracking");
+	}
+
+	public void ChangetoFlashcards(){
+		GameObject player = GameObject.Find("Player_height");
+		Destroy(player);
+		SceneManager.LoadScene("Flashcard Level");
 	}
 
 	public void Exit(){
