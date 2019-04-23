@@ -29,9 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controller Vive.unity
     guid: 8a44f637e3a3417468897ed03bbb7e92
-  - enabled: 1
-    path: Assets/Scenes/Menu_copy.unity
-    guid: c3d0510e7a261c740a63afa2e32afb25
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/New.unity
     guid: 2cf64e12c21f0ca4980d9bb7d6bbaabf
