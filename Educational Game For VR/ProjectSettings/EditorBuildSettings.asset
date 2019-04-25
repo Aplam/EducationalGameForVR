@@ -29,9 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controller Vive.unity
     guid: 8a44f637e3a3417468897ed03bbb7e92
-  - enabled: 1
-    path: Assets/Scenes/Menu_copy.unity
-    guid: c3d0510e7a261c740a63afa2e32afb25
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/New.unity
     guid: 2cf64e12c21f0ca4980d9bb7d6bbaabf
@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tableware_For_Your_Kitchen_demo.unity
     guid: a2e83744505449145b549dd6cf161dc2
+  - enabled: 1
+    path: Assets/Scenes/Flashcard Level.unity
+    guid: 177fb8432a9dcbb49b1e595a7d26f503
   m_configObjects: {}
