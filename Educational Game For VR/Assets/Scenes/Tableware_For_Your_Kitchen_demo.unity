@@ -2970,6 +2970,7 @@ GameObject:
   - component: {fileID: 790443276}
   - component: {fileID: 790443281}
   - component: {fileID: 790443280}
+  - component: {fileID: 790443282}
   - component: {fileID: 790443279}
   - component: {fileID: 790443278}
   - component: {fileID: 790443277}
@@ -3112,8 +3113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c7589330c37d7594f960e67858f7b300, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 790443282}
+        m_MethodName: ChangetoTitle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3162,6 +3163,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790443275}
   m_CullTransparentMesh: 0
+--- !u!114 &790443282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790443275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7589330c37d7594f960e67858f7b300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &831938027
 GameObject:
   m_ObjectHideFlags: 0
