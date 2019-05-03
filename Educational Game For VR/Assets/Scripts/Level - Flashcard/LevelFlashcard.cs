@@ -15,7 +15,7 @@ public class LevelFlashcard : MonoBehaviour
   public List<string> frontTextList = new List<string>();
   public List<string> backTextList = new List<string>();
   public TextAsset cSVFile;
-  
+
   // Start is called before the first frame update
   void Start() {
     List<string> frontTextList = new List<string>();
@@ -34,6 +34,10 @@ public class LevelFlashcard : MonoBehaviour
 
   public bool stepCompleted() {
     return SteamVR_Actions._default.TopButton.GetStateUp(SteamVR_Input_Sources.Any);
+  }
+
+  public bool cardLearned() {
+    return SteamVR_Actions._default.XButton.GetStateUp(SteamVR_Input_Sources.Any);
   }
 
   void Update() {
