@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e9b3bd21714dba544b2bf0d64cd8bb54
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spawnPos: {instanceID: 0}
+  - breadToSpawn: {fileID: 100046, guid: ec40b66161fcdf5458ccee83032f58c3, type: 3}
+  - tomatoToSpawn: {instanceID: 0}
+  - cheeseToSpawn: {instanceID: 0}
+  - hamToSpawn: {instanceID: 0}
+  - lettuceToSpawn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
