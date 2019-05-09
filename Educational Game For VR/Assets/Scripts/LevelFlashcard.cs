@@ -25,8 +25,9 @@ public class LevelFlashcard : MonoBehaviour
   private FileInfo[] allCSVs;
   // The index of the currently selected deck within allCSVs. (Note, this is the currently selected deck, not necessarily the deck currently displayed on the flashcards)
   private int curDeckIndex = 0;
-  // The list of learned cards in the current deck represented by their index value within the deck
-  private List<int> learned = new List<int>();
+  // The array of learned cards in the current deck. learned[i] = true if the ith card is learned, false otherwise
+  private bool[] learned;
+  private int learnedCount = 0;
 
   // Start is called before the first frame update
   void Start() {
@@ -46,14 +47,14 @@ public class LevelFlashcard : MonoBehaviour
   }
 
   void NextStep() {
-    if (frontTextArr.Length == learned.Count) {
-      cardFrontText.text = "You\'ve learned all of your flashcards!";
-      cardBackText.text = "Congratulations!";
+    if (frontTextArr.Length == learnedCount) {
+      cardFrontText.text = "Congratulations!\n\nYou\'ve learned all of your flashcards!";
+      cardBackText.text = "You\'re on a roll! Why stop now?\n\nSelect another flashcard deck to continue studying.";
       progressAudioSource.Play();
     }
     else if (randomize) {
       int prevStep = stepCount;
-      while (stepCount == prevStep && learned.Contains(stepCount)) {
+      while (stepCount == prevStep && learned[stepCount] == true) {
         stepCount = Random.Range(0,frontTextArr.Length);
       }
       cardFrontText.text = frontTextArr[stepCount];
@@ -62,11 +63,14 @@ public class LevelFlashcard : MonoBehaviour
     }
     else {
       stepCount += 1;
-      while (learned.Contains(stepCount)) {
-        stepCount += 1;
-      }
       if (stepCount == frontTextArr.Length) {
         stepCount = 0;
+      }
+      while (learned[stepCount] == true) {
+        stepCount += 1;
+        if (stepCount == frontTextArr.Length) {
+          stepCount = 0;
+        }
       }
       cardFrontText.text = frontTextArr[stepCount];
       cardBackText.text = backTextArr[stepCount];
@@ -103,7 +107,11 @@ public class LevelFlashcard : MonoBehaviour
     frontTextArr = frontTextList.ToArray();
     backTextArr = backTextList.ToArray();
     // reset the list of learned flashcards for the newly selected deck
-    learned = new List<int>();
+    learned = new bool[frontTextArr.Length];
+    for (int i = 0; i < learned.Length; i++) {
+      learned[i] = false;
+    }
+    learnedCount = 0;
     stepCount = -1;
     NextStep();
   }
@@ -137,11 +145,12 @@ public class LevelFlashcard : MonoBehaviour
   }
 
   void Update() {
-    if(stepCompleted()) {
+    if(stepCompleted() && frontTextArr.Length != learnedCount) {
       NextStep();
     }
-    if(cardLearned()) {
-      learned.Add(stepCount);
+    if(cardLearned() && frontTextArr.Length != learnedCount) {
+      learned[stepCount] = true;
+      learnedCount += 1;
       NextStep();
     }
   }
