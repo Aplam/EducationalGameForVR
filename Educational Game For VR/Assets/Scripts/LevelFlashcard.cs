@@ -33,10 +33,10 @@ public class LevelFlashcard : MonoBehaviour
     DirectoryInfo csvDirInfo = new DirectoryInfo(Application.streamingAssetsPath + "/flashcards");
     allCSVs = csvDirInfo.GetFiles("*.csv");
     changeDeck();
-    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
-    stepCount = -1;
-    cardFrontText.text = "This is the Omnicard.\n\nThis side is the front...";
-    cardBackText.text = "... and this side is the back. Press \'Y\' to start studying your custom flashcards! After you're finished reviewing a card, press \'Y\' to keep the current card in the rotation and proceed to the next or press \'X\' to mark the current card as 'learned' which will remove it from the rotation.\n\nGood luck; have fun!";
+    // progressAudioSource.mute = false;
+    updateSelectText();
+    cardFrontText.text = frontTextArr[stepCount];
+    cardBackText.text = backTextArr[stepCount];
     randomizerButtonText.text = "Randomizer\nOff";
     randomize = false;
   }
@@ -102,9 +102,10 @@ public class LevelFlashcard : MonoBehaviour
     }
     frontTextArr = frontTextList.ToArray();
     backTextArr = backTextList.ToArray();
-    progressAudioSource.Play();
     // reset the list of learned flashcards for the newly selected deck
     learned = new List<int>();
+    stepCount = -1;
+    NextStep();
   }
 
   public void selPrevDeck() {
@@ -112,7 +113,7 @@ public class LevelFlashcard : MonoBehaviour
     if (curDeckIndex == -1) {
       curDeckIndex = allCSVs.Length - 1;
     }
-    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
+    updateSelectText();
   }
 
   public void selNextDeck() {
@@ -120,7 +121,19 @@ public class LevelFlashcard : MonoBehaviour
     if (curDeckIndex == allCSVs.Length) {
       curDeckIndex = 0;
     }
-    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
+    updateSelectText();
+  }
+
+  private void updateSelectText() {
+    string filename = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
+    string selection = "";
+    if (filename.Length > 10) {
+      selection += filename.Substring(0,9) + "...";
+    }
+    else {
+      selection = filename;
+    }
+    selDeckText.text = selection;
   }
 
   void Update() {
@@ -128,9 +141,7 @@ public class LevelFlashcard : MonoBehaviour
       NextStep();
     }
     if(cardLearned()) {
-      if (stepCount != -1 ) {
-        learned.Add(stepCount);
-      }
+      learned.Add(stepCount);
       NextStep();
     }
   }
