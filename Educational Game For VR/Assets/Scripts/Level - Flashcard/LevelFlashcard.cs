@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Valve.VR;
 using System.IO;
 
@@ -15,12 +16,14 @@ public class LevelFlashcard : MonoBehaviour
   public string[] backText;
   private FileInfo[] allCSVs;
   private int curDeckIndex = 0;
+  public Text selDeckText;
 
   // Start is called before the first frame update
   void Start() {
     DirectoryInfo csvDirInfo = new DirectoryInfo(Application.streamingAssetsPath + "/flashcards");
     allCSVs = csvDirInfo.GetFiles("*.csv");
     changeDeck();
+    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
   }
 
   public bool stepCompleted() {
@@ -45,6 +48,22 @@ public class LevelFlashcard : MonoBehaviour
     }
     frontText = frontTextList.ToArray();
     backText = backTextList.ToArray();
+  }
+
+  public void selPrevDeck() {
+    curDeckIndex -= 1;
+    if (curDeckIndex == -1) {
+      curDeckIndex = allCSVs.Length - 1;
+    }
+    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
+  }
+
+  public void selNextDeck() {
+    curDeckIndex += 1;
+    if (curDeckIndex == allCSVs.Length) {
+      curDeckIndex = 0;
+    }
+    selDeckText.text = Path.GetFileNameWithoutExtension(allCSVs[curDeckIndex].Name);
   }
 
   void Update() {
