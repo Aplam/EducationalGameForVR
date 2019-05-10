@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - bread
+  - cheese
+  - tomato
+  - ham
+  - lettuce
   layers:
   - Default
   - TransparentFX

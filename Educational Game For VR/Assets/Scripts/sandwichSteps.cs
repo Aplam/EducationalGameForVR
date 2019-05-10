@@ -16,18 +16,14 @@ public class sandwichSteps : MonoBehaviour
     {
         instruct = new string[]{
         "Step 1: Retrieve the bread and place it on the gray cutting board.\n",
-        "Step 2: Retrieve the ham and place it on the cutting board. \n",
+        "Step 2: Retrieve the ham and place it on the cutting board.\n",
         "Step 3: Retrieve the cheese and place it on the cutting board.\n",
         "Step 4: Retrieve the tomato and place it on the board.\n",
         "Step 5: Retrieve the lettuce and place it on the board.\n",
         "Congratulations! A sandwich is yours!"
          };
     }
-
-    public string getInstruct(int i)
-    {
-        return instruct[i];
-    }
+		
     public bool stepCompleted()
     {
         return SteamVR_Actions._default.TopButton.GetStateUp(SteamVR_Input_Sources.Any);

@@ -20,7 +20,6 @@ public class sandwichTracker : MonoBehaviour {
   // Start is called before the first frame update
   void Start() {
     stepCount = 0;
-    stepText.text = sandwich.getInstruct(stepCount);
   }
 
   // Call NextStep once a step is completed to update the stepCount and show the player the next step
