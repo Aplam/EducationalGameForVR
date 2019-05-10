@@ -10,10 +10,24 @@ public class SceneChange : MonoBehaviour
 		GameObject player = GameObject.Find("Player_height");
 		Destroy(player);
 		SceneManager.LoadScene("Tableware_For_Your_Kitchen_demo");
+		SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+		SceneManager.LoadScene("Ingredients", LoadSceneMode.Additive);
 	}
 
-	public void Pause(){
-		SceneManager.LoadScene("Menu_copy", LoadSceneMode.Additive);
+	public void Recipes(){
+		GameObject button = GameObject.Find("Back Button");
+		GameObject button2 = GameObject.Find("Back Button (1)");
+		Destroy(button);
+		Destroy(button2);
+		SceneManager.LoadScene("Recipes", LoadSceneMode.Additive);
+	}
+
+	public void backtopause(){
+		GameObject button = GameObject.Find("Back Button");
+		GameObject button2 = GameObject.Find("Back Button (1)");
+		Destroy(button);
+		Destroy(button2);
+		SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
 	}
 
 	public void ChangetoTitle(){
