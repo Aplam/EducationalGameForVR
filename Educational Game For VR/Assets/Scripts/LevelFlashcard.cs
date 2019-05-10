@@ -54,8 +54,11 @@ public class LevelFlashcard : MonoBehaviour
     }
     else if (randomize) {
       int prevStep = stepCount;
-      while (stepCount == prevStep && learned[stepCount] == true) {
-        stepCount = Random.Range(0,frontTextArr.Length);
+      while (stepCount == prevStep) {
+        int random = Random.Range(0,frontTextArr.Length);
+        if (random != stepCount && learned[random] == false) {
+          stepCount = random;
+        }
       }
       cardFrontText.text = frontTextArr[stepCount];
       cardBackText.text = backTextArr[stepCount];
