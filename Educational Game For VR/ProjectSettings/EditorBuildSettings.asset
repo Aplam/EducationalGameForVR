@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a4433493e5a045243aaadc84614c7096
@@ -29,12 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controller Vive.unity
     guid: 8a44f637e3a3417468897ed03bbb7e92
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/New.unity
-    guid: 2cf64e12c21f0ca4980d9bb7d6bbaabf
   - enabled: 1
     path: Assets/Scenes/Progression Tracking.unity
     guid: df2adb27800c2f44fb72a51c504a748f
@@ -44,4 +35,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Flashcard Level.unity
     guid: 177fb8432a9dcbb49b1e595a7d26f503
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Recipes.unity
+    guid: cbb535b69d508364faa326f263126f32
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Pause.unity
+    guid: ee78c448df0856e4f82fec6942270d1f
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ham_sandwich.unity
+    guid: 343311138e11ee843ad0329b2ed49b61
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ingredients/Ingredients.unity
+    guid: f364631c90db7aa4397ff2fb1b007829
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ingredients/Ingredients1.unity
+    guid: a226aa75653141243ac4fe3c5919213f
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ingredients/Ingredients2.unity
+    guid: 3404a0cedec26214b9fc945e18fc9708
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ingredients/Ingredients3.unity
+    guid: f955eccf87689a64eb305ee127d3b36e
+  - enabled: 1
+    path: Assets/Scenes/Additive scenes/Ingredients/Ingredients4.unity
+    guid: 39851389d0bf31d4a8c9ee5e559dff46
   m_configObjects: {}
