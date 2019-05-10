@@ -3846,7 +3846,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.673, y: 0.061}
-  m_SizeDelta: {x: 1200.41, y: 1023.78}
+  m_SizeDelta: {x: 1200.41, y: 1072.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955741742
 MonoBehaviour:
@@ -3900,14 +3900,13 @@ MonoBehaviour:
 
 
     After you''re done reviewing each card you can either press ''X'' to mark that
-    card as ''learned'' and remove it from the rotation for this study session before
-    proceeding to the next card or you can press ''Y'' to just move onto the next
-    card.
+    card as ''learned'' and remove it from the rotation or you can press ''Y'' to
+    just move onto the next card, leaving the previous card in the rotation.
 
 
     Use the blue arrow buttons on this board to scroll through the avaiable decks
-    (CSV files found in ''.../StreamingAssets/flashcards'') and click the middle button
-    to change the OmniCard to that deck.'
+    (CSV files found in ''.../Educational Game For VR_Data/StreamingAssets/flashcards'')
+    and click the middle button to change the OmniCard to that deck.'
 --- !u!222 &1955741744
 CanvasRenderer:
   m_ObjectHideFlags: 0
